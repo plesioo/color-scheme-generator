@@ -1,0 +1,130 @@
+*, *::after, *::before {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --secondary-bg-color: #1C1C1C;
+  --primary-bg-color: #1F2937;
+  --primary-color: #D5D4D8;
+  --secondary-color: white;
+  --select-border-color: #D1D5DB;
+  --button-bg-color: #3D4B60;
+}
+
+:root.white-mode {
+  --secondary-bg-color: #1C1C1C;
+  --primary-bg-color: #FFFFFF;
+  --primary-color: #2B283A;
+  --secondary-color: #374151;
+  --select-border-color: #D1D5DB;
+  --button-bg-color: #FFF;
+}
+
+/* utility */
+
+.flex {display: flex;}
+.al-c {align-items: center;}
+.text-m {font-size: 0.75rem;}
+.pointer {cursor: pointer;}
+
+/* layout */
+
+body {
+  background-color: var(--secondary-bg-color);
+  padding-top: 4em;
+  justify-content: center;
+  margin: auto;
+  position: relative;
+  max-width: 800px;
+}
+
+main {
+  height: 550px;
+  width: 550px;
+  background-color: var(--primary-bg-color);
+  padding: 1.5em 0;
+}
+
+.container {
+  padding-right: 0.75em;
+  padding-left: 0.75em;
+}
+
+/* typography */
+
+option {
+  background-color: var(--primary-bg-color);
+}
+
+/* color selector */
+
+.color-selector {
+  gap: 0.5em;
+  padding-bottom: 1.5em;
+}
+
+.color-selector__input {
+  background: #D1D5DB;
+  width: 60px;
+  height: 45px;
+  border: none;
+}
+
+.color-selector__dropdown {
+  background-color: transparent;
+  color: var(--primary-color);
+  font-size: 1rem;
+  padding: 0.65em 8em 0.65em 1em;
+  border-radius: 6px;
+  border: 1px solid var(--select-border-color);
+}
+
+.color-selector__btn {
+  background-color: var(--button-bg-color);
+  color: var(--secondary-color);
+  border: none;
+  padding: 1.25em 1.125em;
+  font-weight: 500;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.white-mode .color-selector__btn {
+  padding: 1.125em 1em;
+  border: 1px solid var(--select-border-color);
+}
+
+/* color schemes */
+
+.color-schemes {
+  height: 90%;
+}
+
+.color-schemes__item {
+  flex: 1;
+  flex-direction: column;
+  gap: 0.5em;
+}
+
+.color-schemes__scheme {
+  height: 100%;
+  width: 100%;
+}
+
+.color-schemes__span {
+  color: var(--primary-color);
+  font-family: 'Inter';
+  font-weight: 500;
+  padding: 0.675em;
+}
+
+/* toggle mode */
+
+.toggle-mode {
+  position: absolute;
+  top: 35px;
+  left: 35px;
+  border-radius: 50%;
+}

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Color Scheme Generator</title>
+
+  <!-- Google Font -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+  
+  <!-- Icons -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Styles -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="flex">
+  <main>
+    <section class="flex al-c color-selector container">
+      <input 
+        type="color" 
+        class="color-selector__input"
+        id="seed-color" 
+        aria-label="Choose seed color." 
+      />
+      <select 
+        name="color-mode" 
+        class="color-selector__dropdown" 
+        id="color-mode" 
+        aria-label="Choose color scheme mode."
+      >
+        <option value="monochrome">Monochrome</option>
+        <option value="monochrome-dark">Monochrome-dark</option>
+        <option value="monochrome-light">Monochrome-light</option>
+        <option value="analogic">Analogic</option>
+        <option value="complement">Complement</option>
+        <option value="analogic-complement">Analogic-complement</option>
+        <option value="triad">Trid</option>
+        <option value="quad">Quad</option>
+      </select>
+      <button class="color-selector__btn text-m pointer" id="get-scheme-btn">
+        Get color scheme
+      </button>
+    </section>
+    <section class="flex color-schemes" id="color-schemes"></section>
+  </main>
+  <div class="toggle-mode pointer" id="toggle-mode">
+    <i class="fa-solid fa-circle-half-stroke fa-2xl" style="color: #63E6BE;"></i>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
